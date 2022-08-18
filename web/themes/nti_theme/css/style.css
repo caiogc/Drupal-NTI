@@ -1,0 +1,708 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+
+ body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    
+}
+
+.navbar{
+    background-color: #f7f7f7; 
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+a:hover {
+    opacity: 0.7;
+}
+
+#nav-list li a {
+    color: #111111;
+}
+.footer-list li a {
+    color: #FFFFFF;
+}
+
+
+#nav-list {
+    list-style: none;
+    font-weight: 600;   
+}
+h2 {
+    font-weight: bold;
+    color: black;
+    width: 30vw;
+}
+.nti-iniciais{
+    color: #ae1935;
+}
+#logo > h2{
+    font-size: x-large;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: #484848;
+}
+
+.contato, .contato a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.footer-list {
+    display: flex;
+    list-style: none;
+    color: #FFFFFF; 
+    padding-top: 1rem;  
+}
+.footer-list li {
+    margin-left: 32px;
+  }
+.copyright {
+    display: flex;
+    background-color: black;
+    width: 100vw;
+    height: 3vh;
+    bottom: 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_footer > img {
+    width: 400px;
+}
+#logo-Ufop > img{
+    height: 100%;
+}
+
+main {
+    background: url("../img/background.png") no-repeat bottom;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+.catalogo-main{
+    width: 50vw;
+    padding: 6%; 
+    font-size: 140%;
+}
+.catalogo-main h1{
+    color: #ae1935;
+}
+.catalogo-main h4{
+    font-weight: normal;
+    text-align: justify;
+}
+#nossosServiços-btn{
+    color: #ae1935;
+    font-weight: 700;
+    border-color: #ae1935;
+    background: transparent;
+    padding: 10 20 10 20;
+    border: 2px solid;
+}
+
+#nossosServiços-btn:hover {
+    opacity: 0.7;
+}
+
+.noticias > h2 > span {    
+    background-color: #ae1935;
+    border-radius:50%;
+    padding: 3 10 3 10;    
+    color: #FFFFFF;
+ }
+
+ .projetos > h2 > span {    
+    background-color: #ae1935;
+    border-radius:50%;
+    padding: 3 12 3 12;    
+    color: #FFFFFF;
+ }
+ 
+ .oportunidades > h2 > span {    
+    background-color: #ae1935;
+    border-radius:50%;
+    padding: 3 9 3 9;    
+    color: #FFFFFF;
+ }
+.noticias {
+    padding-left: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projetos, .oportunidades {
+    padding-left: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+.quemSomos, .ajuda{
+    padding: 2%;
+    margin: 5%;
+}
+#ver-mais {
+    color: #FFFFFF;
+    background: rgb(0, 142, 255);
+    font-weight: bold;
+    min-width: 140px;
+}
+
+#ver-mais:hover {
+    opacity: 0.7;
+}
+
+#mais {
+   font-size: 130%;
+}
+#conheça-btn {
+    color: #FFFFFF;
+    background: #ae1935;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.news-list h4{
+    color:#ae1935;
+    margin-top: 2%;
+}
+
+.news-list h5 {
+    font-weight: 500;
+    margin-bottom: 2%;
+    
+}
+
+#news-date {
+    font-style: italic;
+    font-weight: 500;
+    color: #111111;
+}
+
+.news-list {
+    max-width: 60%;
+    margin-left: 3%;
+    
+}
+.linhaH{
+    margin-left: 3%;
+    width: 60%;
+    height: 1px;
+    background: #000;
+
+}
+
+#maisProjeto {
+    color: #ae1935;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+#short-editais{
+    color: #111111;
+    font-size: larger;
+}
+.quemSomos > h2, .ajuda > h2{
+    color: #ae1935;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.quemSomos > h5, .ajuda > h5{
+    color: #111111;
+}
+
+.page-title {
+    color: #ae1935;
+    font-weight: bold;
+}
+.page-title > span{
+    text-decoration: underline;
+}
+.serviços-page {
+   padding: 6%;
+}
+.serviços-h2{
+    color: #000;
+}
+
+#serviços-btn{
+    color: #ae1935;
+    font-weight: 700;
+    border-color: #ae1935;
+    background: transparent;
+    border: 2px solid;
+}
+
+.item-categ{
+    margin: 2% 0 2% 2%;
+    padding: 2%;
+}
+.item-categ > img{
+    height: 50px;
+}
+
+.item-categ > div > h3{
+    font-size: larger;
+    color: rgb(0, 142, 255);
+}
+.item-categ > div > h5{
+    font-size: medium;
+    color: #111111;
+}
+
+.a-z_items{
+    list-style: none;
+    border-left: 6px solid #BABABA;
+}
+
+.a-z_item {
+    color: #111111;
+    font-size: larger;
+    font-weight: 500;
+    line-height: 2.5rem;
+}
+
+#tituloServiço{
+    border-left: 6px solid rgb(0, 142, 255);
+}
+
+.categoriasList{
+    list-style: none;
+}
+
+#solicitar-btn {
+    color: #FFFFFF;
+    background: rgb(0, 142, 255);
+    font-weight: 700;
+}
+
+#servicoDesc-btn {
+    color: rgb(0, 142, 255);
+    background: #FFFFFF;
+    border: 2px solid rgb(0, 142, 255);
+    font-weight: 700;
+}
+
+#subTitulo-Descricao > h4 {
+    font-weight: 600;
+    font-size: larger;
+}
+#subTitulo-Descricao > h5 {
+    font-size: medium;
+}
+
+#descricaoServico > h5{
+    font-size: medium;
+}
+
+.faq-btn{
+    background-color: transparent;
+    border: none;
+}
+.faq-btn > h5 {
+    font-size: medium;
+    font-weight: 600;
+}
+
+#faq-seta{
+    font-size: 1.1rem;
+    color: rgb(0, 142, 255);
+    margin: 0 5 0 0;
+    padding: 0;
+}
+
+.accordion-body > h5{
+    font-size: medium;
+}
+
+.faq-btn.collapsed > h5 ::after{
+    font-family: 'bootstrap-icons';
+    content: "\F231";
+    color: rgb(0, 142, 255);
+    font-size: 1.1rem;
+}
+.faq-btn > h5 ::after{
+    font-family: 'bootstrap-icons';
+    content: "\F229";
+    color: rgb(0, 142, 255);
+    font-size: 1.1rem;
+}
+#docs-div{
+    max-width: 180px;
+}
+#docs-div > i{
+    font-size: 50px;
+    color: rgb(0, 142, 255);
+}
+
+#docs-div > p{
+    font-size: medium;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1rem;
+    color: #111111;
+}
+
+.card-title{
+    font-weight: 600;
+    font-size: larger;
+}
+
+.card-text{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#cards-projetos > a{
+    color: #111111;
+}
+
+#descricaoProjeto > div > h5{
+    font-size: medium;
+}
+
+#cardDescProjeto{
+    background: rgb(0, 142, 255);
+    color: #FFFFFF;
+}
+
+#ano-editais{
+    font-size: x-large;
+    font-weight: 700;
+    color: rgb(0, 142, 255);
+}
+
+#noticias-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.news-list h3{
+    color:rgb(0, 142, 255);
+    margin-top: 3%;
+}
+#noticia-descricao h3{
+    color: #111111;
+    font-weight: 600;
+}
+
+#noticia-text{
+    font-size: medium;
+    font-weight: 500;
+}
+
+.veja-tambem h3{
+    color: #ae1935;
+    font-weight: 500;
+    font-size: x-large;
+}
+.veja-tambem h4{
+    color: rgb(0, 142, 255);
+    font-weight: 600;
+    font-size: larger;
+}
+
+.veja-tambem h5{
+    color: #111111;
+    font-size: medium;
+}
+
+.veja-tambem a{
+    max-width: 380px;
+}
+
+#quemSomos-card > h3{   
+    color: rgb(0, 142, 255);
+    font-weight: 600;
+}
+#quemSomos-card > h5{   
+    font-size: medium;
+    font-weight: 600;
+}
+
+#quemSomos-card > h3{   
+    color: rgb(0, 142, 255);
+    font-weight: 600;
+}
+#quemSomos-btn{   
+    border: rgb(0, 142, 255) 2px solid;
+    color: rgb(0, 142, 255);
+    font-weight: 600;
+}
+
+#quemSomos-btn:hover {
+    opacity: 0.7;
+}
+
+/*-----RESPONSIVO------*/
+@media (max-width: 992px) {
+    .footer-list{
+        display: none;
+    }
+    .logo_footer{
+        width: 50%;
+    }
+    .logo_footer img{
+        width: 100%;
+    }
+    .contato{
+        font-size: small;
+    }
+    .copyright{
+        font-size: x-small;
+    }
+    #logo h2{
+        margin: 0;
+        font-size: 15px;
+    }
+    .catalogo-main{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+    .catalogo-main > h1, .catalogo-main > h4{
+        font-size: 1rem;
+        font-weight: 700;
+        align-self: flex-start;
+        padding: 8px;
+        line-height: 1.5rem;
+    }
+    #nossosServiços-btn{
+        font-size: small;
+        margin: auto;
+        
+    }
+    main{
+        background: url("../img/background.png") no-repeat left bottom #f7f7f7;
+        background-size: 120vw;
+        height: 75vh;        
+    }
+
+    .news-list{
+        max-width: 100vw;
+        margin-right: 6%;
+        margin-left: 0;
+        padding: 8px;
+    }
+    .linhaH{
+        width: auto;
+        margin-right: 6% ;
+        margin-left: 0;
+    }    
+    .news-list h5{
+        font-size: medium;
+    }
+    .projetos, .oportunidades{
+        margin-right: 6%;
+    }
+    .carousel-item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel-item > img{
+        margin: 0 0 10 10;
+        width: fit-content;
+    }
+    .carousel-item > .col-5{
+        width: fit-content;
+    }
+    .carousel-item h3{
+        text-align: center;
+    }
+    .carousel-item p{
+        font-size: small;
+        margin-bottom: 5px;
+    }
+    #short-editais{
+        font-size: medium;
+    }
+
+    .quemSomos h2, .ajuda h2{
+        width: auto;
+        font-size: larger;
+        margin: 5px;
+        align-self: flex-start;
+    }
+    .quemSomos h5, .ajuda h5{
+        font-size: medium;
+        margin: 5px;
+        line-height: 1.5rem !important;
+    }
+    .quemSomos, .ajuda{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #conheça-btn{
+        font-size: medium;
+        width: fit-content;
+        margin-bottom: 5px;
+    }
+    .page-title{
+        margin-top: 15px;
+    }
+    .veja-tambem > div {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .veja-tambem > div > .col-3{
+        width: 300px;
+        margin-bottom: 15px;
+    }
+    .veja-tambem h4{
+        padding-left: 0;
+    }
+    .serviços-page{
+        width: 100vw;
+        margin:auto;
+    }
+    .news-list h3{
+        font-size: larger;
+        margin-bottom: 2px;
+    }
+    s
+    #cards-projetos{
+        flex-direction: column;
+    }
+    #cards-projetos > .item-categ{
+        width: fit-content;
+        margin-bottom: 20px;
+        margin-left: 6%;
+    }
+    #cards-projetos .card-title{
+        padding: 0;
+        margin: 0;
+    }
+    #descricaoProjeto > div{
+        width: fit-content;
+    }
+    #descricaoProjeto .card-title{
+        padding:0;
+    }
+    #subTitulo-Descricao h4{
+        padding-left: 0;
+    }
+    #quemSomos-card{
+        padding-left: .5rem!important;
+        padding-right: .5rem!important;
+        width: fit-content;
+        margin-left: 6%;
+    }
+    .serviços-page > .navbar{
+        margin-bottom: 10px!important;
+    }
+    .serviços-page > .navbar .nav{
+        margin-top: 15px;
+        flex-direction: column;
+        width: fit-content;
+    }
+    #serviços-btn{
+        width: fit-content;
+        margin-bottom: 5px;
+    }
+    .serviços-page > .navbar a{
+        font-size: x-small!important;
+    }
+    .categorias-container{
+        width: fit-content;
+    }
+    .categorias{
+        width: fit-content;
+        
+    }
+    .item-categ{
+        width: 80vw;
+        margin-left: 5%;
+        margin-bottom: 25px;
+    }
+    .serviços-page > .col-3{
+        width: fit-content;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .serviços-page > .col-3 > h2{
+        width: fit-content;
+        margin: 15px !important;
+    }
+    .a-z_items{
+        border: none;        
+
+    }    
+    .a-z_item{
+        font-size: medium;
+        line-height: 1.2rem!important;
+        padding-bottom: 15px;
+        border: none;
+        word-break: break-all !important ;
+        white-space: normal!important;
+        display: flex;
+        align-self: flex-start ;
+    }
+    .categorias-container > h2{
+        width: fit-content;
+    }
+    .serviços-page > .col-4{
+        width: fit-content;
+    }
+    .serviços-page > .col-4 > h2{
+        margin-bottom: 15px !important;
+        margin-top: 15px;
+    }
+    #descricaoServico{
+        margin: 0 !important;
+    }
+    #descricaoServico > h5{
+        margin-bottom: 25px !important;
+        line-height: 1.5rem !important;
+    }
+    .faq-btn > h5{
+        text-align: justify;
+    }
+    #subTitulo-Descricao{
+        margin-bottom: 1rem !important;
+        margin-top: 0 !important ;
+    }
+    #solicitarServiço{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 0 !important;
+    }
+    #solicitarServiço > .col-6{
+        width: fit-content;
+        margin: auto !important;
+    }
+    #solicitarServiço > .h3 {
+        margin-left: 1rem !important;
+        margin-top: 0 !important;
+        width: fit-content;
+    }
+    #solicitarServiço > .serviços_a-z {
+        margin-left: 0 !important;
+        
+    }
+    #solicitarServiço #solicitar-btn{
+        margin-top: 0 !important;
+    }
+
+    
+}

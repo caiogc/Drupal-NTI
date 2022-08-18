@@ -1,0 +1,234 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - path_info.args: Array of URL arguments un aliassed.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'node--type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+  ]
+%}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+    
+    <nav class="navbar navbar-expand-lg fixed-top p-3" >
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" id="logo" href="#">
+            <h2><span class="nti-iniciais">N</span>úcleo de <span class="nti-iniciais">T</span>ecnologia da <span class="nti-iniciais">I</span>nformação</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+              <ul class="navbar-nav text-end" id="nav-list">
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicosA-Z.html">Catálogo de Serviços</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="projetos.html">Projetos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="oportunidades.html">Oportunidades</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="quemSomos.html">Quem Somos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Precisa de Ajuda?</a>
+                    </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+
+    
+    
+    <main>
+        <div class="catalogo-main">
+            <h1>SERVIÇOS QUE FAZEM A DIFERENÇA</h1>
+            <h4>O NTI provê serviços de Tecnologia da Informação e Comunicação que auxiliam a UFOP a cumprir suas metas de desenvolvimento do ensino, pesquisa e extensão</h4>
+            <a class="btn rounded-pill text-nowrap shadow-sm mt-5" role="button" href="servicosA-Z.html" id="nossosServiços-btn">NOSSO CATÁLOGO DE SERVIÇOS</a>
+        </div>
+    </main>
+    
+    <section class="noticias mt-5">
+
+        <h2><span class="título">N</span>otícias</h2>
+        <article class="news-list mt-5">
+            <a href="noticiaDescricao.html"><h4>Token é a nova opção para acesso ao RU</h4></a>
+            <h5>A UFOP (Universidade Federal de Ouro Preto), passa a aceitar como alternativa de acesso ao RU tokens.</h5>
+            <p id="news-date">16 de março de 2019</p>
+        </article>
+        <span class="linhaH"></span>
+        <article class="news-list">
+            <a href="noticiaDescricao.html"><h4>Token é a nova opção para acesso ao RU</h4></a>
+            <h5>A UFOP (Universidade Federal de Ouro Preto), passa a aceitar como alternativa de acesso ao RU tokens.</h5>
+            <p id="news-date">16 de março de 2019</p>
+        </article>
+        <span class="linhaH"></span>
+        <article class="news-list">
+            <a href="noticiaDescricao.html"><h4>Token é a nova opção para acesso ao RU</h4></a>
+            <h5>A UFOP (Universidade Federal de Ouro Preto), passa a aceitar como alternativa de acesso ao RU tokens.</h5>
+            <p id="news-date">16 de março de 2019</p>
+        </article>
+        <span class="linhaH"></span>
+        <article class="news-list mb-3">
+            <a href="noticiaDescricao.html"><h4>Token é a nova opção para acesso ao RU</h4></a>
+            <h5>A UFOP (Universidade Federal de Ouro Preto), passa a aceitar como alternativa de acesso ao RU tokens.</h5>
+            <p id="news-date">16 de março de 2019</p>
+        </article>
+        <a role="button" class="btn align-self-center rounded-pill px-4 shadow-sm" href="noticias.html" id="ver-mais"><span class="bi bi-plus-lg pe-2" id="mais"></span>Notícias</a>
+
+    </section>
+    
+    <section class="projetos mt-5">
+        <h2><span class="título">P</span>rojetos</h2>
+        <div id="carouselProjetos" class="carousel carousel-fade carousel-dark slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+              <div class="carousel-item active bg-white row d-flex justify-content-center p-5">
+                  <img src="img/p1.png" class="col-5 d-inline-flex border rounded-3 p-0 shadow-sm" alt="...">
+                  <div class="d-flex flex-column justify-content-between col-5 ps-4">
+                      <div> 
+                          <h3>Rádio UFOP</h3>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero ad beatae nihil quidem laudantium voluptatibus officiis, magni ipsa quia excepturi cupiditate alias iusto, pariatur ea voluptas iure provident voluptate?</p>
+                      </div>                      
+                        <a href="projetoDescricao.html" id="maisProjeto">Saiba mais</a>                    
+                    </div>
+                </div>
+
+              <div class="carousel-item bg-white row d-flex justify-content-center p-5">
+                <img src="img/p2.png" class="col-5 d-inline-flex border rounded-3 p-0 shadow-sm" alt="...">
+                <div class="d-flex flex-column justify-content-between col-5 ps-4">
+                    <div> 
+                        <h3>Projeto 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero ad beatae nihil quidem laudantium voluptatibus officiis, magni ipsa quia excepturi cupiditate alias iusto, pariatur ea voluptas iure provident voluptate?</p>
+                    </div>                      
+                      <a href="projetoDescricao.html" id="maisProjeto">Saiba mais</a>                    
+                  </div>
+              </div>
+
+              <div class="carousel-item bg-white row d-flex justify-content-center p-5">
+                <img src="img/p3.png" class="col-5 d-inline-flex border rounded-3 p-0 shadow-sm" alt="...">
+                <div class="d-flex flex-column justify-content-between col-5 ps-4">
+                    <div> 
+                        <h3>Projeto 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero ad beatae nihil quidem laudantium voluptatibus officiis, magni ipsa quia excepturi cupiditate alias iusto, pariatur ea voluptas iure provident voluptate?</p>
+                    </div>                      
+                      <a href="projetoDescricao.html" id="maisProjeto">Saiba mais</a>                    
+                  </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjetos" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProjetos" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        
+        <a role="button" class="btn align-self-center rounded-pill px-4 shadow-sm" href="projetos.html" id="ver-mais"><span class="bi bi-plus-lg pe-2" id="mais"></span>Projetos</a>
+
+    </section>
+    
+    <section class="oportunidades mt-5">
+        <h2><span class="título">O</span>portunidades</h2>
+        <a class="h5 p-1 mt-5" id="short-editais" href="#">
+                Edital de Seleção de Bolsistas NTI Nº 02/2019 - Desenvolvedor Web
+        </a>
+        <a class="h5 p-1 mb-4" id="short-editais" href="#">
+            Edital de Seleção de Bolsistas NTI Nº 02/2019 - Desenvolvedor Web
+        </a>
+            
+        
+        <a role="button" class="btn align-self-center rounded-pill px-4 shadow-sm mb-5" href="oportunidades.html" id="ver-mais"><span class="bi bi-plus-lg pe-2" id="mais"></span>Editais</a>
+    </section>
+
+    <section class="quemSomos border rounded-3 shadow-sm mb-1">
+        <h2 class="mb-3">Quem Somos</h2>
+        <h5 class="lh-lg p-1">O Núcleo de Tecnologia da Informação está há mais de 40 anos contribuindo para engrandecimento da Universidade Federal de Ouro Preto, atuando fomentando
+        desde a infraestrutura computacional ao desenvolvimento de aplicações diversas que auxiliam o desenvolvimento das atividades fim da UFOP.
+            <p>Conheça nossa equipe, o que fazemos, nossa visão.</p>
+        </h5>
+        <a role="button" type="button" class="btn rounded-pill shadow-sm px-4" href="quemSomos.html" id="conheça-btn">Conheça!</a>
+    </section>
+    <br>
+    <section class="ajuda border rounded-3 shadow-sm mt-1">
+        <h2 class="mb-3">Precisa de ajuda?</h2>
+        <h5 class="lh-lg p-1">Alguma dúvida, reclamação ou dificuldade técnica relacionada aos nossos serviços e sistemas? Diga-nos como podemos ajudar. Utilize nosso canal de atendimento
+            para enviar sua requisição ou relatar um incidente e consulte nosso catálogo para obter mais informações sobre algum serviço/sistema específico.
+        </h5>
+        <button type="button" class="btn rounded-pill shadow-sm px-4" id="conheça-btn">Sistema de atendimento</button>
+    </section>
+
+    <footer class="d-flex justify-content-around align-items-center">
+
+        <a class="logo_footer" href="#">
+            <img src="img/logo_footer.PNG">
+        </a>                
+        <span class="contato">
+            (31) 3559-1415
+            <br><a href="maito:contato@nti.ufop.br">contato@nti.ufop.br</a>
+        </span>
+        
+        <ul class="footer-list">
+            <li><a href="servicosA-Z.html">Catálogo de Serviços</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="oportunidades.html">Oportunidades</a></li>
+            <li><a href="quemSomos.html">Quem Somos</a></li>
+            <li><a href="#">Precisa de Ajuda?</a></li>            
+        </ul>
+
+        <span id="logo-Ufop">
+            <img src="img/UFOP.png">
+        </span>
+        
+    </footer>
+    <div class="copyright">
+        <span>Copyright © 2018 Universidade Federal de Ouro Preto</span>
+    </div> 
+    
+    {{ page_top }}  
+    {{ page }}
+    {{ page_bottom }}    
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    
+  </body>
+</html>
+
